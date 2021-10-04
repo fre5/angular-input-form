@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+<h2 *ngIf="subtitle==='Subtitle'">Is this shown?</h2>
+<!-- <h3 [ngStyle]="{'font-size': subtitle === 'Subtitle' ? '24px' : '12px' }">Test some ngStyle</h3>
+<ul *ngFor='let post of posts'>
+  <li>{{ post.title }}</li>
+  <li>{{ post.body }}</li>
+  <li>Votes: {{ post.votes }}</li>
+</ul> -->
+
+<app-post-item *ngFor="let post of posts" [post]="post" (liked)="onLike(post)" (unliked)="onUnlike(post)" (hide)="onHide(post)"></app-post-item>
+<app-create-post (addPost)="addPost($event)"></app-create-post>

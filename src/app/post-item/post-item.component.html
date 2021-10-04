@@ -1,0 +1,9 @@
+<div style="margin-bottom: 40px">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+  <p>Votes: {{ post.votes }}</p>
+  <button (click)="liked.emit(post)" style="margin-right: 10px">Like</button>
+  <button (click)="unliked.emit(post)" style="margin-right: 10px">Unlike</button>
+  <button (click)="hide.emit(post)" style="margin-right: 10px">Hide</button>
+  <br>
+</div>
